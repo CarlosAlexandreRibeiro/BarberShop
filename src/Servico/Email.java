@@ -72,12 +72,13 @@ public class Email {
 
            email.setSubject(this.assunto);
            email.setMsg(this.mensagem);
-           email.addTo(this.destinatario);//por favor trocar antes de testar!!!!
+           email.addTo(this.destinatario);
 
            email.send();
 
        } catch (EmailException e) {
            e.printStackTrace();
+           
        }
     }
 }

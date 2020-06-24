@@ -16,8 +16,8 @@ public class EmailTeste {
     public static void main(String[] args) {
          
         
-        Email email = new Email("Senha e Usuário Sistema Service Desk", 
-                "Segue usuário e senha para acesso ao sistema BarberShop.\n"+"Usuario:user\n"+"Senha: user", 
+        Email email = new Email("Assunto da Barbearia", 
+                "Mensagem do BarberShop", 
                 "carlosferreira.jlle@gmail.com");
         
         email.enviar();

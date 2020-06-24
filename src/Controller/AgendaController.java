@@ -8,6 +8,7 @@ import Model.Servico;
 import Model.DAO.AgendamentoDAO;
 import Model.DAO.ClienteDAO;
 import Model.DAO.ServicoDAO;
+import Servico.Correio;
 import View.Agenda;
 
 public class AgendaController {
@@ -59,8 +60,13 @@ public class AgendaController {
         // salva objeto no BD
         new AgendamentoDAO().insert(agendamento);
         
+        Correio correio = new Correio();
+        correio.NotificarPorEmail(agendamento);
+        
         // inserir elemento na tela
         atualizaTabela();
         helper.limparTela();
+        
+        
     }
 }
